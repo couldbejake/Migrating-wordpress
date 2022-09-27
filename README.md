@@ -4,8 +4,10 @@
 
 
 2. Update site URL in DB
+```
 update wp_options set option_value='http://3.8.93.74' where option_name = 'siteurl';
 update wp_options set option_value='http://3.8.93.74' where option_name = 'home';
+```
 
 3. Update .htaccess
 
