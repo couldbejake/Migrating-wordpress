@@ -33,4 +33,4 @@ RewriteRule . /index.php [L]
 ```
 wp_posts SET post_content = REPLACE(post_content,"http://localhost","http://3.8.93.74")
 ```
-5. Add define('FS_METHOD','direct'); to wp-config.php file
+5. Add ```define('FS_METHOD','direct');``` to wp-config.php file
