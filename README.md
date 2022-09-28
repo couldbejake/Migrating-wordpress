@@ -3,7 +3,7 @@
 1. Copy DB, Files
 
 
-2. Update site URL in DB (Replace <URL> with your site's URL)
+2. Update site URL in DB (Replace ```<URL>``` with your site's URL)
 ```
 update wp_options set option_value='<URL>' where option_name = 'siteurl';
 update wp_options set option_value='<URL>' where option_name = 'home';
@@ -29,7 +29,7 @@ RewriteRule . /index.php [L]
 </IfModule>
 ```
 
-4. Update post URLs (Replace <URL> with your site's URL, and <OLD URL> with your site's old URL)
+4. Update post URLs (Replace ```<URL>``` with your site's URL, and ```<OLD URL>``` with your site's old URL)
 ```
 wp_posts SET post_content = REPLACE(post_content,"<OLD URL>","<URL>")
 ```
