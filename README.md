@@ -29,8 +29,8 @@ RewriteRule . /index.php [L]
 </IfModule>
 ```
 
-4. Update post URLs (Replace <URL> with your site's URL)
+4. Update post URLs (Replace <URL> with your site's URL, and <OLD URL> with your site's old URL)
 ```
-wp_posts SET post_content = REPLACE(post_content,"http://localhost","<URL>")
+wp_posts SET post_content = REPLACE(post_content,"<OLD URL>","<URL>")
 ```
 5. Add ```define('FS_METHOD','direct');``` to wp-config.php file
