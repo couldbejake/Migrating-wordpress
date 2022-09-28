@@ -3,10 +3,10 @@
 1. Copy DB, Files
 
 
-2. Update site URL in DB
+2. Update site URL in DB (Replace <URL> with your site's URL)
 ```
-update wp_options set option_value='http://3.8.93.74' where option_name = 'siteurl';
-update wp_options set option_value='http://3.8.93.74' where option_name = 'home';
+update wp_options set option_value='<URL>' where option_name = 'siteurl';
+update wp_options set option_value='<URL>' where option_name = 'home';
 ```
 
 3. Update .htaccess
@@ -29,8 +29,8 @@ RewriteRule . /index.php [L]
 </IfModule>
 ```
 
-4. Update post URLs 
+4. Update post URLs (Replace <URL> with your site's URL)
 ```
-wp_posts SET post_content = REPLACE(post_content,"http://localhost","http://3.8.93.74")
+wp_posts SET post_content = REPLACE(post_content,"http://localhost","<URL>")
 ```
 5. Add ```define('FS_METHOD','direct');``` to wp-config.php file
