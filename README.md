@@ -41,15 +41,15 @@ UPDATE wp_posts SET post_content = REPLACE(post_content,"<OLD URL>","<URL>")
 
 External -> Local
 
-scp username@domain:/home/xxx/xxx/11.jpeg /Users/username/Desktop/   
+`scp username@domain:/home/xxx/xxx/11.jpeg /Users/username/Desktop/`
 
 Local -> External
 
-scp /Users/username/Desktop/11.jpeg username@domain:/home/xxx/xxx
+`scp /Users/username/Desktop/11.jpeg username@domain:/home/xxx/xxx`
 
 To add a key do the following
 
--i jakenelson-cpanel.pem 
+`-i jakenelson-cpanel.pem`
 
 If you get the errror `no host key alg RSA`, a temporary fix is to add 
 
@@ -58,4 +58,4 @@ HostKeyAlgorithms +ssh-rsa
 PubkeyAcceptedKeyTypes +ssh-rsa
 ```
 
-to the bottom of ` /etc/ssh/sshd_config`
+to the bottom of `/etc/ssh/sshd_config`, for a long-term fix, use newer key types
