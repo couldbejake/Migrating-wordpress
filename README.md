@@ -31,6 +31,31 @@ RewriteRule . /index.php [L]
 
 4. Update post URLs (Replace ```<URL>``` with your site's URL, and ```<OLD URL>``` with your site's old URL)
 ```
-wp_posts SET post_content = REPLACE(post_content,"<OLD URL>","<URL>")
+UPDATE wp_posts SET post_content = REPLACE(post_content,"<OLD URL>","<URL>")
 ```
 5. Add ```define('FS_METHOD','direct');``` to wp-config.php file
+
+6. If using Elementor, Elementor > Tools > Regenerate CSS
+
+# Copying remote files
+
+External -> Local
+
+scp username@domain:/home/xxx/xxx/11.jpeg /Users/username/Desktop/   
+
+Local -> External
+
+scp /Users/username/Desktop/11.jpeg username@domain:/home/xxx/xxx
+
+To add a key do the following
+
+-i jakenelson-cpanel.pem 
+
+If you get the errror `no host key alg RSA`, a temporary fix is to add 
+
+```
+HostKeyAlgorithms +ssh-rsa
+PubkeyAcceptedKeyTypes +ssh-rsa
+```
+
+to the bottom of ` /etc/ssh/sshd_config`
