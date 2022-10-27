@@ -62,4 +62,4 @@ to the bottom of `/etc/ssh/sshd_config`, for a long-term fix, use newer key type
 
 # Create a symbolic link for phpmyadmin
 
-ln -s /usr/share/phpmyadmin /var/www/html/admin/phpmyadmin
+`ln -s /usr/share/phpmyadmin /var/www/html/admin/phpmyadmin`
