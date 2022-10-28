@@ -64,8 +64,10 @@ to the bottom of `/etc/ssh/sshd_config`, for a long-term fix, use newer key type
 
 `ln -s /usr/share/phpmyadmin /var/www/html/admin/phpmyadmin`
 
-# List files and sizes
+# List file size
 
 `ls -lh {FILE}`
 
-`ls -lh`
+# List folder size
+
+`du -sh *`
